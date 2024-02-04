@@ -6,7 +6,7 @@ const Project = ({section,data}) => {
     let itemList = data
     return (
         <>
-        <h1>{section}</h1>
+        <h1 className="text-3xl">{section}</h1>
 
         <div className="block">     
             <input placeholder="...Search" className="w-80"/>      

@@ -19,7 +19,7 @@ const HeroB = () => {
             </div>
             
             <div className="parent">
-                <div className="grid grid-cols-[50%_50%] min-h-40 justify-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 min-h-40 justify-center">
                     <div className="bg-red-50 m-2">
                         <p>    
                             1 Year 6 Months
@@ -38,7 +38,7 @@ const HeroB = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-[50%_50%] min-h-40 justify-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 min-h-40 justify-center">
                     <div className="bg-red-50 m-2">
                         <p>    
                             Experience Overview
