@@ -1,5 +1,7 @@
 import './App.css';
-import HeroA from './components/Navbar';
+import HeroA from './components/Hero/HeroA';
+import HeroB from './components/Hero/HeroB';
+
 
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
       <button className='btn btn-primary'>New</button>
         <div className='container flex'>
           <HeroA/>
-          {/* <HeroA/> */}
+          <HeroB/>
         </div>
     </div>
   );
