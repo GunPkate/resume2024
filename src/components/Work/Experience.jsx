@@ -2,6 +2,17 @@
 
 
 const Project = ({section,data}) => {
+    const img = 
+        {
+            // margin: "20px",
+            width:  "700px",
+            height: "300px",
+            objectFit: "scale-down"
+        }
+        
+    const sectionStyle = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-h-40 justify-center";
+    const a = "text-2xl";
+    const b = "text-xl";
 
     let itemList = data
     return (
@@ -11,7 +22,7 @@ const Project = ({section,data}) => {
         <div className="block">     
             <input placeholder="...Search" className="w-80"/>      
             <div className="w-12/12 parent">
-                <div className="grid grid-cols-[50%_50%] min-h-40 justify-center">
+                <div className={sectionStyle}>
                     {itemList.length > 0 ? itemList.map( data=> {
                         let fullData = "";
                         for (let j of data.tech){
@@ -19,11 +30,13 @@ const Project = ({section,data}) => {
                         }
                         return(
                         <div className="bg-red-50 m-2">
-                            <img src={data.img} className="w-100" alt="" />
-                            <div>{data.name}</div>
-                            <div>{data.desc}</div>
-                            <div>{data.tag}</div>
-                            <div>{fullData}</div>
+                            <div style={{margin:"20px"}}>
+                            <img src={data.img} style={img} alt="" />
+                            </div>
+                            <div className={a}>{data.name}</div>
+                            <div className={b}>{data.desc}</div>
+                            <div className={b}>{data.tag}</div>
+                            <div className={b}>{fullData}</div>
                         </div>)
                      }) :
                     <>
