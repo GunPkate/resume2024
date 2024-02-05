@@ -5,13 +5,17 @@ const HeroB = () => {
     const b = document.getElementById("hero");
     console.log(a)
     console.log(b)
+
+    const textStyle = "text-2xl text-blue-400"
+    
     return (
         <>
-        <div className="block w-7/12">
+        <div className="block w-7/12 my-auto">
+        <h1 className="text-3xl">Software Developer(Outsource)</h1>
             <div className="parent">
-                <p className="child min-h-40 bg-red-50 text-red-700 text-3xl">aa</p>
                 <div className="p-6 hero-div">
-                    <p>Working as Software Developer(Outsource) <span>Java and Angular</span> 
+                    <p className="whitespace-pre-line">
+                        Working as Software Developer(Outsource) <span className={textStyle}>Java and Angular</span> 
                         My assignment is to maintain and develope new feature for Enterpreise and Public Company
                         Mostly experience <span> ERP and Accounting system </span>
                     </p>

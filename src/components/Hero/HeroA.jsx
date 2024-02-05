@@ -9,8 +9,7 @@ const HeroA = () => {
         <>
         <div className="block w-5/12">
             <div className="parent">
-                <p className="child h-20 bg-red-50 text-red-700 text-3xl">aa</p>
-                <div className="p-6 hero-div">
+                <div className="p-6 hero-div rounded-full bg-red-300">
                     <img id={"hero"} src={logo} className="object-cover h-100 w-100"/>
                 </div>
             </div>

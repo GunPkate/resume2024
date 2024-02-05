@@ -16,13 +16,19 @@ function App() {
     <div className="App">
       <button className='btn btn-primary'>New</button>
         <div className='container mx-auto'>
-          <div className='flex'>
+          <div className='flex min-h-screen'>
             <HeroA/>
             <HeroB/>
-          </div>  
-          <Experience section = {"Exprience"} data = {experience}/>
-          <Experience section = {"Projects"} data = {works}/>
-          <Experience section = {"Certificates"} data = {certificates}/>
+          </div> 
+          <div className='min-h-screen'>
+            <Experience section = {"Exprience"} data = {experience}/>
+          </div>
+          <div className='min-h-screen'>
+            <Experience section = {"Projects"} data = {works}/>
+          </div>
+          <div className='min-h-screen'>
+            <Experience section = {"Certificates"} data = {certificates}/>
+          </div>
         </div>
     </div>
   );
