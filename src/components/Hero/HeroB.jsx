@@ -6,43 +6,48 @@ const HeroB = () => {
     console.log(a)
     console.log(b)
 
-    const textStyle = "text-2xl text-blue-400"
+    const textHeroMainStyle = "text-2xl text-blue-400"
+    const highLightStyle = "text-2xl text-blue-400"
+    const highLightDiv = "bg-red-50 m-2 min-h-2"
+    const textHeroNormal = "text-2xl"
+
+    const skillHighLight = [
+        { title: "Experience Overview",data1: "1 Year 6 Months", data2: "ERP Developer"},
+        { title: "Ex",data1: "1 Year 6 Months", data2: "ERP Developer"},
+        { title: "",data1: "My Skill", data2: "ERP Developer"},
+        { title: "Ex",data1: "1 Year 6 Months", data2: "ERP Developer"},
+    ]
     
     return (
         <>
-        <div className="block w-7/12 my-auto">
+        <div className="block w-7/12 my-auto mx-2 bg-yellow-100">
         <h1 className="text-3xl">Software Developer(Outsource)</h1>
-            <div className="parent">
+            <div className={textHeroNormal}>
                 <div className="p-6 hero-div">
                     <p className="whitespace-pre-line">
-                        Working as Software Developer(Outsource) <span className={textStyle}>Java and Angular</span> 
-                        My assignment is to maintain and develope new feature for Enterpreise and Public Company
-                        Mostly experience <span> ERP and Accounting system </span>
+                        My current role is <span className={textHeroMainStyle}>Java and Angular</span> software developer <br/>
+                        My assignment is to maintain and develope new feature for Enterpreise and Public Company <br/>
+                        Mostly experienced in <span className={textHeroMainStyle}> ERP and Accounting system </span>
                     </p>
                 </div>
             </div>
             
-            <div className="parent">
+            <div className={textHeroNormal}>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 min-h-40 justify-center">
-                    <div className="bg-red-50 m-2">
-                        <p>    
-                            1 Year 6 Months
+                        {skillHighLight?skillHighLight.map(itemn=>
+                        <div  className={highLightDiv}>
+                            <p className={highLightStyle}>    
+                            {itemn.data1}
                         </p>
                         <p>    
-                            ERP Developer
+                            {itemn.data2}
                         </p>
+                        </div>
+                        ):<>
+                        </>}
                     </div>
-                    <div className="bg-red-50 m-2">
-                        <p>    
-                            1 Year 6 Months
-                        </p>
-                        <p>    
-                            ERP Developer
-                        </p>
-                    </div>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 min-h-40 justify-center">
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 min-h-40 justify-center">
                     <div className="bg-red-50 m-2">
                         <p>    
                             Experience Overview
@@ -59,7 +64,7 @@ const HeroB = () => {
                             
                         </p>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
         </>
