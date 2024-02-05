@@ -12,6 +12,7 @@ const HeroB = () => {
     const textHeroNormal = "text-2xl"
 
     const sectionStyle = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 min-h-40 justify-center";
+    const c = "bg-red-50 m-2 rounded-xl"
 
     const skillHighLight = [
         { title: "Experience Overview",data1: "1 Year 6 Months", data2: "ERP Developer"},
@@ -37,7 +38,7 @@ const HeroB = () => {
             <div className={textHeroNormal}>
                 <div className={sectionStyle}>
                         {skillHighLight?skillHighLight.map(itemn=>
-                        <div  className={highLightDiv}>
+                        <div  className={highLightDiv+" "+c}>
                             <p className={highLightStyle}>    
                             {itemn.data1}
                         </p>

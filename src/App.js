@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <button className='btn btn-primary'>New</button>
-        <div className='container mx-auto'>
+        <div className='container mx-auto' >
           <div className='flex min-h-screen' style={{background: "radial-gradient(circle at 100%, #eee, #eee 50%, #222 75%, #222 75%)"}}>
             <HeroA/>
             <HeroB />
@@ -24,10 +24,10 @@ function App() {
             <Experience section = {"Exprience"} data = {experience}/>
           </div>
           <div className='min-h-screen'>
-            <Experience section = {"Projects"} data = {works}/>
+            <Experience section = {"Certificates"} data = {certificates}/>
           </div>
           <div className='min-h-screen'>
-            <Experience section = {"Certificates"} data = {certificates}/>
+            <Experience section = {"Projects"} data = {works}/>
           </div>
         </div>
     </div>
