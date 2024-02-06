@@ -40,6 +40,7 @@ const Project = ({section,data}) => {
                                 </div>
                             </div>
                             <div className={a}>{data.name}</div>
+                            <div className={a}>{data.date}</div>
                             <div >{data.desc}</div>
                             <div >{data.tag}</div>
                             <div >{fullData}</div>
