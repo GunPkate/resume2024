@@ -1,6 +1,7 @@
 import './App.css';
 import HeroA from './components/Hero/HeroA';
 import HeroB from './components/Hero/HeroB';
+import Navbar from './components/Navbar';
 import Experience from './components/Work/Experience'
 import { Projects } from './details/Projects';
 import { WorkExperience } from './details/WorkExperience';
@@ -14,9 +15,9 @@ function App() {
 
   return (
     <div className="App">
-      <button className='btn btn-primary'>New</button>
+        <Navbar/>
         <div className='container mx-auto' >
-          <div className='flex min-h-screen' style={{background: "radial-gradient(circle at 100%, #eee, #eee 50%, #222 75%, #222 75%)"}}>
+          <div className='flex min-h-screen' >
             <HeroA/>
             <HeroB />
           </div> 

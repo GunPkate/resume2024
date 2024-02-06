@@ -7,14 +7,14 @@ export const Education = [
     {
         name: "Thammasat",
         tag: "Accounting",
-        tech: [],
+        tech: ["06/2013 - 12/2018"],
         desc:"",
         img: "https://picsum.photos/200/300"
     },
     {
         name: "Thai Nichi Institute",
         tag: "Information Technology",
-        tech: [],
+        tech: ["08/2020 - 03/2024"],
         desc:"",
         img: "https://picsum.photos/200/300"
     },

@@ -1,10 +1,6 @@
 
 
 const HeroB = () => {
-    const a = document.getElementsByClassName("hero-div");
-    const b = document.getElementById("hero");
-    console.log(a)
-    console.log(b)
 
     const textHeroMainStyle = "text-2xl text-blue-400"
     const highLightStyle = "text-2xl text-blue-400"

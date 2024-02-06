@@ -15,7 +15,8 @@ const Project = ({section,data}) => {
     const a = "text-2xl";
     const b = "text-xl";
     const c = "bg-red-50 m-2 rounded-2xl border-2 border-rose-600"
-    const btn = "rounded-full bg-sky-500 hover:bg-sky-700 px-3 my-6 text-white"
+    const btn = "block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 "
+    const btnText = "mx-auto text-2xl py-2 my-2"
 
     let itemList = data
     return (
@@ -42,7 +43,7 @@ const Project = ({section,data}) => {
                             <div >{data.desc}</div>
                             <div >{data.tag}</div>
                             <div >{fullData}</div>
-                            <button className={btn}>More Info</button>
+                            <button className={btn + btnText}>More Info</button>
                         </div>)
                      }) :
                     <>
