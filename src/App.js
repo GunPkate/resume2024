@@ -11,25 +11,25 @@ function App() {
 
   const works = Projects; 
   const experience = WorkExperience;
-  const certificates = Certificates
+  const certificates = Certificates;
+
+  const items = [
+    { topic : "Exprience", section : experience } ,
+    { topic : "Certificates", section : certificates } ,
+    { topic : "Projects", section : works } ,
+   ]
 
   return (
     <div className="App">
-        <Navbar/>
+        <Navbar navigate = {items} />
         <div className='container mx-auto' >
           <div className='flex min-h-screen' >
             <HeroA/>
             <HeroB />
-          </div> 
-          <div className='min-h-screen'>
-            <Experience section = {"Exprience"} data = {experience}/>
           </div>
-          <div className='min-h-screen'>
-            <Experience section = {"Certificates"} data = {certificates}/>
-          </div>
-          <div className='min-h-screen'>
-            <Experience section = {"Projects"} data = {works}/>
-          </div>
+          {items.length > 0 ? items.map( (title,id)  => 
+            <Experience key={id} section={title.topic} data={ title.section }/>   
+          )  : <></>}
         </div>
     </div>
   );

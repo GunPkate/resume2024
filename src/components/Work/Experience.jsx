@@ -27,13 +27,13 @@ const Project = ({section,data}) => {
             <input placeholder="...Search" className="w-80"/>      
             <div className="w-12/12 parent">
                 <div className={sectionStyle+" "+b}>
-                    {itemList.length > 0 ? itemList.map( data=> {
+                    {itemList.length > 0 ? itemList.map( (data,id)=> {
                         let fullData = "";
                         for (let j of data.tech){
                             fullData += ' '+j;
                         }
                         return(
-                        <div className={c}>
+                        <div key={id} className={c}>
                             <div style={{background:"white"}}>
                                 <div style={{margin:"20px"}}>
                                 <img src={data.img} style={img} alt="" />

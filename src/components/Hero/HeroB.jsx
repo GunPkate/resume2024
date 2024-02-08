@@ -11,9 +11,9 @@ const HeroB = () => {
     const c = "bg-red-50 m-2 rounded-xl"
 
     const skillHighLight = [
-        { title: "Experience Overview",data1: "1 Year 6 Months", data2: "ERP Developer"},
-        { title: "Ex",data1: "1 Year 6 Months", data2: "ERP Developer"},
-        { title: "",data1: "My Skill", data2: "ERP Developer"},
+        { title: "Experience Overview",data1: "1 Year 6 Months", data2: "ERP Developer with various framework skills"},
+        { title: "Business Skill",data1: "1 Year 5 Months", data2: "Accounting & Audit Firm"},
+        { title: "Main Tech Stack",data1: "", data2: ["Angular ", "Java ", "C# ", "Javascript "]},
         { title: "Ex",data1: "1 Year 6 Months", data2: "ERP Developer"},
     ]
     
@@ -25,7 +25,8 @@ const HeroB = () => {
                 <div className="p-6 hero-div">
                     <p className="whitespace-pre-line">
                         My current role is <span className={textHeroMainStyle}>Java and Angular</span> software developer <br/>
-                        My assignment is to maintain and develope new feature for Enterpreise and Public Company <br/>
+                        My assignment is to maintain and develope <br/>
+                        new feature for Enterprise and Public Company <br/>
                         Mostly experienced in <span className={textHeroMainStyle}> ERP and Accounting system </span>
                     </p>
                 </div>
@@ -33,9 +34,12 @@ const HeroB = () => {
             
             <div className={textHeroNormal}>
                 <div className={sectionStyle}>
-                        {skillHighLight?skillHighLight.map(itemn=>
-                        <div  className={highLightDiv+" "+c}>
+                        {skillHighLight?skillHighLight.map( (itemn,id)=>
+                        <div key={id} className={highLightDiv+" "+c}>
                             <p className={highLightStyle}>    
+                            {itemn.title}
+                        </p>
+                        <p>    
                             {itemn.data1}
                         </p>
                         <p>    
