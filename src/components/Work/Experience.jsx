@@ -54,7 +54,7 @@ const Project = ({section,data}) => {
             <h1 className={header} id={section}>{section}</h1>
     
             <div className="block">     
-                //<input placeholder="...Search" className="w-80"/>      
+                {/* <input placeholder="...Search" className="w-80"/>       */}
                 <div className="w-12/12 parent">
                     <div className={section === "Certificates" ? sectionStyle+" "+b : sectionProject+" "+b}>
                         {itemList.length > 0 ? itemList.map( (data,id)=> {
@@ -94,7 +94,7 @@ const Project = ({section,data}) => {
                 <>
                 <h1 className={header} id={section}>{section}</h1>
             
-                   // <input placeholder="...Search" className="w-80"/>      
+                   {/*  <input placeholder="...Search" className="w-80"/>       */}
                     <div className="block lg:flex mx-auto justify-center">     
                         <div className="w-5/12 parent mx-auto">
                             <div className={sectionExperience+" "+b}>

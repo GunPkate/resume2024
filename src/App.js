@@ -21,7 +21,7 @@ function App() {
    ]
 
   return (
-    <div className="App">
+    <div className="App" id="About Me">
         <Navbar navigate = {items} />
         <div className='container mx-auto' >
           <div className='flex min-h-screen' >

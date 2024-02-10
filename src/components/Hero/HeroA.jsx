@@ -16,7 +16,7 @@ const HeroA = () => {
     const textHeroNormal = ""
     return (
         <>
-        <div className="block w-5/12 my-auto" id="About Me">
+        <div className="block w-5/12 my-auto" >
             <div className="parent">
                 <div className=" hero-div rounded-full ">
                     <img id={"hero"} src={logo} style={img}/>
