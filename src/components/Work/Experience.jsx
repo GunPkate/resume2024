@@ -15,9 +15,36 @@ const Project = ({section,data}) => {
     const sectionExperience = "grid grid-cols-2  md:grid-cols-2  lg:grid-cols-[40%_40%] lg:gap-x-8 min-h-40 justify-center";
     const a = "text-2xl";
     const b = "text-xl";
-    const c = "bg-sky-50 m-2 rounded-2xl border-2 border-blue-600"
+    const card = "bg-sky-50 m-2 rounded-2xl border-2 border-blue-600"
     const btn = "block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 "
     const btnText = "mx-auto text-xl py-2 my-2"
+
+    const NonExp = ({data,id}) => {
+
+        let fullData = "";
+        for (let j of data.tech){
+            fullData += ' '+j;
+        }
+
+        return(
+
+            <div key={id} className={card}>
+                <div style={{background:"white"}}>
+                    <div style={{margin:"20px"}}>
+                    <img src={data.img} style={img} alt="" />
+                    </div>
+                </div>
+                <div className={a}>{data.name}</div>
+                <div className={a}>{data.date}</div>
+                <div dangerouslySetInnerHTML={{__html: `${data.desc}` }}></div>
+                <div >{data.tag}</div>
+                <div >{fullData}</div>
+                <button className={btn + btnText}>More Info</button>
+            </div>
+
+            )
+    }
+
 
     let itemList = data
     return (
@@ -33,23 +60,21 @@ const Project = ({section,data}) => {
                         for (let j of data.tech){
                             fullData += ' '+j;
                         }
+
                         if(section !== "Experience"){
 
-                            return(
-                            <div key={id} className={c}>
-                                <div style={{background:"white"}}>
-                                    <div style={{margin:"20px"}}>
-                                    <img src={data.img} style={img} alt="" />
-                                    </div>
-                                </div>
-                                <div className={a}>{data.name}</div>
-                                <div className={a}>{data.date}</div>
-                                <div dangerouslySetInnerHTML={{__html: `${data.desc}` }}></div>
-                                <div >{data.tag}</div>
-                                <div >{fullData}</div>
-                                <button className={btn + btnText}>More Info</button>
-                            </div>)
+                            return(<>
+                             <NonExp data={data} id={id}/>
+                            </>
+                            )
 
+
+                        }
+                        else {
+                            return(
+     
+                                <NonExp data={data} id={id}/>
+                            )
                         }
                      }) :
                     <>
