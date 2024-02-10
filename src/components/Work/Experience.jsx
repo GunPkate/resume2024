@@ -14,14 +14,14 @@ const Project = ({section,data}) => {
     const sectionStyle = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-h-40 justify-center";
     const a = "text-2xl";
     const b = "text-xl";
-    const c = "bg-red-50 m-2 rounded-2xl border-2 border-rose-600"
+    const c = "bg-sky-50 m-2 rounded-2xl border-2 border-blue-600"
     const btn = "block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 "
     const btnText = "mx-auto text-2xl py-2 my-2"
 
     let itemList = data
     return (
         <>
-        <h1 className={header}>{section}</h1>
+        <h1 className={header} id={section}>{section}</h1>
 
         <div className="block">     
             <input placeholder="...Search" className="w-80"/>      

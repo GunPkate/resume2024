@@ -14,6 +14,7 @@ function App() {
   const certificates = Certificates;
 
   const items = [
+    { topic : "About Me", section : experience } ,
     { topic : "Exprience", section : experience } ,
     { topic : "Certificates", section : certificates } ,
     { topic : "Projects", section : works } ,
@@ -28,7 +29,7 @@ function App() {
             <HeroB />
           </div>
           {items.length > 0 ? items.map( (title,id)  => 
-            <Experience key={id} section={title.topic} data={ title.section }/>   
+            title.topic != "About Me" ? <Experience key={id} section={title.topic} data={ title.section }/> : <></>
           )  : <></>}
         </div>
     </div>
