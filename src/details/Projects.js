@@ -6,14 +6,24 @@ export const  Projects = [
         name: "Debt Collector Email",
         tag: "node js",
         tech: ["nodeJS","nodemailer","Hapi","Type ORM"],
-        desc: ["use nodemailer to generate email."," Context of the email detail change depends on amount of money and day count of last payment "],
+        desc: `
+             use nodemailer to generate email. <br/>
+             Context of the email detail change depends on <br/>
+             amount of money and day count of last payment. 
+        `,
         img: `${pro1}`
     },
     {
         name: "C# Accounting",
         tag: "C# WPF",
         tech: ["C#","WPF","Accounting","MS SQL"],
-        desc: "Window app accounting ERP using C# WPF to quickly use simple UI and dotnet 4.7 to support Crystal Report. Details of the will be saved into MS SQL and get query from database",
+        desc: 
+        `Window app accounting ERP using C# WPF  <br/>
+        use simple UI and dotnet 4.7 to support Crystal Report. <br/>
+        details of the will be saved into MS SQL <br/>
+        get query from database.
+        `
+        ,
         img: `${pro2}`
     },
     {

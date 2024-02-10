@@ -8,11 +8,12 @@ const img =
     objectFit: "scale-down"
 }
 
+const me = `
+I am Gun, currrently software developer(Outsource) 
+at Advanced Info Service (AIS)
+`
 const HeroA = () => {
-    const a = document.getElementsByClassName("hero-div");
-    const b = document.getElementById("hero");
-    console.log(a)
-    console.log(b)
+    const textHeroNormal = ""
     return (
         <>
         <div className="block w-5/12 my-auto" id="About Me">
@@ -22,10 +23,10 @@ const HeroA = () => {
                 </div>
             </div>
             
-            <div className="parent">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 min-h-40 justify-center">
-                    <div className="bg-sky-50 m-2">
-                        I am Gun, currrently software developer(Outsource) at Advanced Info Service (AIS)
+            <div className="parent my-auto ms-auto">
+                <div className="grid grid-cols-1 min-h-40 justify-center">
+                    <div className="bg-sky-50 m-2 text-2xl">
+                        {me}
                     </div>
                 </div>
             </div>

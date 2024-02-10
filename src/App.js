@@ -15,7 +15,7 @@ function App() {
 
   const items = [
     { topic : "About Me", section : experience } ,
-    { topic : "Exprience", section : experience } ,
+    { topic : "Experience", section : experience } ,
     { topic : "Certificates", section : certificates } ,
     { topic : "Projects", section : works } ,
    ]
